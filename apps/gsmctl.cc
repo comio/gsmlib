@@ -110,7 +110,7 @@ static void printInfo(InfoParameter ip)
       int fun;
       fun = m->getFunctionalityLevel();
       std::cout << _("<FUN>  Functionality Level: ") << fun << std::endl;
-    } catch (gsmlib::GsmException &x) { 
+    } catch (gsmlib::GsmException &) { 
       std::cout << _("<FUN>  Functionality Level: ") << _("unsupported") << std::endl;
     }
     break;
@@ -167,7 +167,7 @@ static void printInfo(InfoParameter ip)
           if (m->getFacilityLockStatus(*i, gsmlib::VoiceFacility))
             std::cout << _("  Voice");
         }
-        catch (gsmlib::GsmException &e)
+        catch (gsmlib::GsmException &)
 	  {
           std::cout << _("  unknown");
         }
@@ -176,7 +176,7 @@ static void printInfo(InfoParameter ip)
 	  if (m->getFacilityLockStatus(*i, gsmlib::DataFacility))
 	    std::cout << _("  Data");
         }
-        catch (gsmlib::GsmException &e)
+        catch (gsmlib::GsmException &)
 	  {
           std::cout << _("  unknown");
         }
@@ -185,7 +185,7 @@ static void printInfo(InfoParameter ip)
 	    if (m->getFacilityLockStatus(*i, gsmlib::FaxFacility))
 	      std::cout << _("  Fax");
 	  }
-        catch (gsmlib::GsmException &e)
+        catch (gsmlib::GsmException &)
 	  {
 	    std::cout << _("  unknown");
 	  }
@@ -352,7 +352,7 @@ int main(int argc, char *argv[])
     bool swHandshake = false;
 
     int opt;
-    int dummy;
+    int dummy = 0;
     while((opt = getopt_long(argc, argv, "I:o:d:b:hvX", longOpts, &dummy))
           != -1)
       switch (opt)
@@ -410,6 +410,8 @@ int main(int argc, char *argv[])
         throw gsmlib::GsmException(_("unknown option"), gsmlib::ParameterError);
         break;
       }
+
+	dummy = dummy;
 
     // open the port and ME/TA
     m = new gsmlib::MeTa(new
