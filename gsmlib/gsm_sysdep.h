@@ -61,6 +61,15 @@ char *alloca ();
 #define read _read
 #endif
 
+#ifdef _MSC_VER
+#if _MSC_VER < 1700
+#define MIN __min
+#else
+#define MIN std::min
+#endif
+#else
+#define MIN std::min
+#endif
 // define common data types with fixed sizes
 
 #if SIZEOF_UNSIGNED_SHORT_INT == 2

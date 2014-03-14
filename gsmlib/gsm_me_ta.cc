@@ -18,7 +18,7 @@
 #include <gsmlib/gsm_me_ta.h>
 #include <gsmlib/gsm_parser.h>
 #include <gsmlib/gsm_sysdep.h>
-
+#include <algorithm>
 #include <cstdlib>
 
 using namespace gsmlib;
@@ -174,7 +174,7 @@ std::string MeTa::setSMSStore(std::string smsStore, int storeTypes, bool needRes
 
     // build chat string
     std::string chatString = "+CPMS=\"" + smsStore + "\"";
-    for (int i = 1; i < std::min(_capabilities._cpmsParamCount, storeTypes); ++i)
+    for (int i = 1; i < MIN(_capabilities._cpmsParamCount, storeTypes); ++i)
       chatString += ",\"" + smsStore + "\"";
 
     return _at->chat(chatString, "+CPMS:");
