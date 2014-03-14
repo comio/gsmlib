@@ -2,3 +2,13 @@
 *~
 \#*#
 .#*
+*.TMP
+*.tmp
+*.user
+
+# VisualStudio
+win32/Debug
+win32/Release
+*.suo
+*.sdf
+*.opensdf
