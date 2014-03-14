@@ -381,7 +381,7 @@ int main(int argc, char *argv[])
     std::string concatenatedMessageIdStr;
 
     int opt;
-    int dummy;
+    int dummy = 0;
     while((opt = getopt_long(argc, argv, "c:C:I:t:fd:a:b:hvs:S:F:P:LXDr",
                              longOpts, &dummy)) != -1)
       switch (opt)

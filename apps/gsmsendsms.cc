@@ -108,7 +108,7 @@ int main(int argc, char *argv[])
     int concatenatedMessageId = -1;
 
     int opt;
-    int dummy;
+    int dummy = 0;
     while((opt = getopt_long(argc, argv, "c:C:I:d:b:thvXr", longOpts, &dummy))
           != -1)
       switch (opt)
@@ -175,6 +175,8 @@ int main(int argc, char *argv[])
         throw gsmlib::GsmException(_("unknown option"), gsmlib::ParameterError);
         break;
       }
+
+    dummy = dummy;
 
     if (!test)
     {

@@ -258,7 +258,7 @@ int main(int argc, char *argv[])
     gsmlib::Ref<gsmlib::MeTa> sourceMeTa, destMeTa;
 
     int opt;
-    int dummy;
+    int dummy = 0;
     while((opt = getopt_long(argc, argv, "I:p:s:d:b:cyhvViD:S:Xt:", longOpts,
                              &dummy))
           != -1)
@@ -350,6 +350,8 @@ int main(int argc, char *argv[])
         throw gsmlib::GsmException(_("unknown option"), gsmlib::ParameterError);
         break;
       }
+
+    dummy = dummy;
 
     // check if all parameters all present
     if (destination == "" || source == "")

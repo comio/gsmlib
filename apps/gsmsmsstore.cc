@@ -122,7 +122,7 @@ int main(int argc, char *argv[])
     gsmlib::Ref<gsmlib::MeTa> sourceMeTa, destMeTa;
 
     int opt;
-    int dummy;
+    int dummy = 0;
     while((opt = getopt_long(argc, argv, "I:t:s:d:b:cxlakhvVXC:",
                              longOpts, &dummy))
           != -1)
