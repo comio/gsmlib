@@ -14,6 +14,7 @@
 #define GSM_UTIL_H
 
 #include <string>
+#include <strstream>
 #include <vector>
 #include <gsmlib/gsm_error.h>
 #ifndef WIN32

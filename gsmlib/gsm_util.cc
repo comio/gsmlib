@@ -164,7 +164,7 @@ bool gsmlib::hexToBuf(const std::string &hexString, unsigned char *buf)
 std::string gsmlib::intToStr(int i)
 {
   std::ostringstream os;
-  os << i << std::ends;
+  os << i;
   return os.str();
 }
 
@@ -172,7 +172,7 @@ std::string gsmlib::removeWhiteSpace(std::string s)
 {
   std::string result;
   for (unsigned int i = 0; i < s.length(); ++i)
-    if (!std::isspace(s[i]))
+    if (!isspace(s[i]))
       result += s[i];
   return result;
 }
@@ -247,7 +247,7 @@ bool gsmlib::isFile(std::string filename)
 void gsmlib::renameToBackupFile(std::string filename) throw(GsmException)
 {
   std::string backupFilename = filename + "~";
-  unlink(backupFilename.c_str());
+  _unlink(backupFilename.c_str());
   if (rename(filename.c_str(), backupFilename.c_str()) < 0)
     throw GsmException(
       stringPrintf(_("error renaming '%s' to '%s'"),
@@ -269,6 +269,7 @@ gsmlib::NoCopy &gsmlib::NoCopy::operator=(NoCopy &n)
 {
   std::cerr << "ABORT: NoCopy::operator= used" << std::endl;
   abort();
+  return *this;
 }
 
 #endif // NDEBUG

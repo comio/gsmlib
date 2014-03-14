@@ -19,7 +19,7 @@
 #include <gsmlib/gsm_util.h>
 #include <fcntl.h>
 #include <iostream>
-#include <sstream>
+#include <strstream>
 #include <errno.h>
 #include <stdio.h>
 #include <assert.h>
@@ -65,9 +65,9 @@ BOOL CancelIoHook(HANDLE file)
 
 void Win32SerialPort::throwModemException(std::string message) throw(GsmException)
 {
-  ostrstream os;
+  std::ostrstream os;
   os << message << " (errno: " << errno << "/" << strerror(errno) << ")"
-     << ends;
+     << std::ends;
   char *ss = os.str();
   std::string s(ss);
   delete[] ss;
@@ -89,7 +89,7 @@ int Win32SerialPort::readByte() throw(GsmException)
     return result;
   }
 
-  unsigned char c;
+  unsigned char c = 0;
   int timeElapsed = 0;
   bool readDone = true;
   ExceptionSafeOverlapped  over;
@@ -144,11 +144,11 @@ int Win32SerialPort::readByte() throw(GsmException)
   {
     // some useful debugging code
     if (c == LF)
-      cerr << "<LF>";
+      std::cerr << "<LF>";
     else if (c == CR)
-      cerr << "<CR>";
-    else cerr << "<'" << (char) c << "'>";
-    cerr.flush();
+      std::cerr << "<CR>";
+    else std::cerr << "<'" << (char) c << "'>";
+    std::cerr.flush();
   }
 #endif
   return c;
@@ -262,8 +262,8 @@ Win32SerialPort::Win32SerialPort(std::string device, int lineSpeed,
       while (readTries-- > 0)
       {
         std::string s = getLine();
-        if (s.find("OK") != string::npos ||
-            s.find("CABLE: GSM") != string::npos)
+        if (s.find("OK") != std::string::npos ||
+            s.find("CABLE: GSM") != std::string::npos)
         {
           foundOK = true;
           readTries = 0;           // found OK, exit loop
@@ -281,8 +281,8 @@ Win32SerialPort::Win32SerialPort(std::string device, int lineSpeed,
         do
         {
           s = getLine();
-          if (s.find("OK") != string::npos ||
-              s.find("CABLE: GSM") != string::npos)
+          if (s.find("OK") != std::string::npos ||
+              s.find("CABLE: GSM") != std::string::npos)
             return;                 // found OK, return
         } while(--readTries);
       }
@@ -305,7 +305,7 @@ Win32SerialPort::Win32SerialPort(std::string device, int lineSpeed,
  }
 }
 
-string Win32SerialPort::getLine() throw(GsmException)
+std::string Win32SerialPort::getLine() throw(GsmException)
 {
   std::string result;
   int c;
@@ -322,7 +322,7 @@ string Win32SerialPort::getLine() throw(GsmException)
 
 #ifndef NDEBUG
   if (debugLevel() >= 1)
-    cerr << "<-- " << result << endl;
+    std::cerr << "<-- " << result << std::endl;
 #endif
 
   return result;
@@ -333,7 +333,7 @@ void Win32SerialPort::putLine(std::string line,
 {
 #ifndef NDEBUG
   if (debugLevel() >= 1)
-    cerr << "--> " << line << endl;
+    std::cerr << "--> " << line << std::endl;
 #endif
 
   if (carriageReturn) line += CR;

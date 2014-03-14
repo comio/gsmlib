@@ -231,9 +231,15 @@ int main(int argc, char *argv[])
       // send SMS
       gsmlib::Ref<gsmlib::SMSSubmitMessage> submitSMS = new gsmlib::SMSSubmitMessage();
       // set service centre address in new submit PDU if requested by user
+
       if (serviceCentreAddress != "")
       {
-	gsmlib::Address sca(serviceCentreAddress);
+        gsmlib::Address sca(serviceCentreAddress);
+        submitSMS->setServiceCentreAddress(sca);
+      }
+      else
+      {
+        gsmlib::Address sca(m->getServiceCentreAddress());
         submitSMS->setServiceCentreAddress(sca);
       }
       submitSMS->setStatusReportRequest(requestStatusReport);

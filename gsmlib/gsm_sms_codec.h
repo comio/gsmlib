@@ -58,7 +58,7 @@ namespace gsmlib
     short _year, _month, _day, _hour, _minute, _seconds, _timeZoneMinutes;
     bool _negativeTimeZone;
 
-  Timestamp() : _year(0), _month(0), _day(0), _hour(0),
+  Timestamp() : _year(0), _month(1), _day(1), _hour(0),
       _minute(0), _seconds(0), _timeZoneMinutes(0), _negativeTimeZone(false) {}
 
     // return true if the time stamp is empty (ie. contains only zeroes)

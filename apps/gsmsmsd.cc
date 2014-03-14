@@ -315,7 +315,7 @@ void sendSMS(std::string spoolDirBase, std::string sentDirBase, std::string fail
 #endif
             rename(filename.c_str(),sentfilename.c_str());
           } else {
-            unlink(filename.c_str());
+            _unlink(filename.c_str());
           }
         }
         catch (gsmlib::GsmException &me)
@@ -681,7 +681,7 @@ int main(int argc, char *argv[])
         {
           me->setSMSRoutingToTA(false, false, false);
         }
-        catch (gsmlib::GsmException &ge)
+        catch (gsmlib::GsmException &)
         {
           // some phones (e.g. Motorola Timeport 260) don't allow to switch
           // off SMS routing which results in an error. Just ignore this.
@@ -710,7 +710,7 @@ int main(int argc, char *argv[])
       {
         me->setSMSRoutingToTA(false, false, false);
       }
-      catch (gsmlib::GsmException &ge)
+      catch (gsmlib::GsmException &)
       {
         // some phones (e.g. Motorola Timeport 260) don't allow to switch
         // off SMS routing which results in an error. Just ignore this.

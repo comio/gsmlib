@@ -87,7 +87,7 @@ bool gsmlib::operator==(const Address &x, const Address &y)
 
 bool Timestamp::empty() const
 {
-  return _year == 0 && _month == 0 && _day == 0 && _hour == 0 && 
+  return _year == 0 && _month == 1 && _day == 1 && _hour == 0 && 
     _minute == 0 && _seconds == 0 && _timeZoneMinutes == 0;
 }
 
@@ -102,10 +102,16 @@ std::string Timestamp::toString(bool appendTimeZone) const
   t.tm_sec = _seconds;
   t.tm_min = _minute;
   t.tm_hour = _hour;
-  t.tm_mon = _month - 1;
+  if (_month > 0)
+	t.tm_mon = _month - 1;
+  else
+    t.tm_mon = 0;
   // year 2000 heuristics, SMSs cannot be older than start of GSM network
   t.tm_year = _year < 80 ? _year + 100 : _year;
-  t.tm_mday = _day;
+  if (_day > 0)
+	t.tm_mday = _day;
+  else
+    t.tm_mday = 1;
   t.tm_isdst = -1;
   t.tm_yday = 0;
   t.tm_wday = 0;
@@ -539,7 +545,7 @@ void SMSEncoder::setSemiOctetsInteger(unsigned long intValue,
 				      unsigned short length)
 {
   std::ostringstream os;
-  os << intValue << std::ends;
+  os << intValue;
   std::string s(os.str());
   assert(s.length() <= length);
   while (s.length() < length) s = '0' + s;
