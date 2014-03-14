@@ -195,7 +195,7 @@ void SortedPhonebook::sync(bool fromDestructor) throw(GsmException)
             OSError);
       }
     }
-    catch(GsmException &e)
+    catch(GsmException &)
     {
       if (pbs != &std::cout) delete pbs;
       throw;

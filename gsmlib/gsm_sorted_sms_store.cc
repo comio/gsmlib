@@ -78,7 +78,7 @@ void SortedSMSStore::readSMSFile(std::istream &pbs, std::string filename)
     {
       readnbytes(filename, pbs, 2, numberBuf);
     }
-  catch (GsmException &ge)
+  catch (GsmException &)
     {
       // ignore error, file might be empty initially
     }
@@ -191,7 +191,7 @@ void SortedSMSStore::sync(bool fromDestructor) throw(GsmException)
         writenbytes(_filename, *pbs, pdu.length(), pdu.data());
       }
     }
-    catch(GsmException &e)
+    catch(GsmException &)
     {
       if (pbs != &std::cout) delete pbs;
       throw;

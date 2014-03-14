@@ -314,7 +314,7 @@ std::string GsmAt::sendPdu(std::string atCommand, std::string response, std::str
 	      // LF separates CDSI messages if there are more than one
 	      while (c == CR || c == LF);
 	    }
-	  catch (GsmException &e)
+	  catch (GsmException &)
 	    {
 	      c = '-';
 	      errorCondition = true;  // TA does not expect PDU anymore, retry
