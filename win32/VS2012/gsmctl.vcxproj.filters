@@ -15,15 +15,15 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="getopt.c">
+    <ClCompile Include="..\getopt.c">
       <Filter>Quellcodedateien</Filter>
     </ClCompile>
-    <ClCompile Include="..\apps\gsmctl.cc">
+    <ClCompile Include="..\..\apps\gsmctl.cc">
       <Filter>Quellcodedateien</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="getopt.h">
+    <ClInclude Include="..\getopt.h">
       <Filter>Header-Dateien</Filter>
     </ClInclude>
   </ItemGroup>

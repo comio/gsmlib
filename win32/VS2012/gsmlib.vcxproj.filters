@@ -11,111 +11,111 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\gsmlib\gsm_at.cc">
+    <ClCompile Include="..\..\gsmlib\gsm_at.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\gsmlib\gsm_error.cc">
+    <ClCompile Include="..\..\gsmlib\gsm_error.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\gsmlib\gsm_cb.cc">
+    <ClCompile Include="..\..\gsmlib\gsm_cb.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\gsmlib\gsm_event.cc">
+    <ClCompile Include="..\..\gsmlib\gsm_event.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\gsmlib\gsm_me_ta.cc">
+    <ClCompile Include="..\..\gsmlib\gsm_me_ta.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\gsmlib\gsm_nls.cc">
+    <ClCompile Include="..\..\gsmlib\gsm_nls.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\gsmlib\gsm_parser.cc">
+    <ClCompile Include="..\..\gsmlib\gsm_parser.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\gsmlib\gsm_phonebook.cc">
+    <ClCompile Include="..\..\gsmlib\gsm_phonebook.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\gsmlib\gsm_sms.cc">
+    <ClCompile Include="..\..\gsmlib\gsm_sms.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\gsmlib\gsm_sms_codec.cc">
+    <ClCompile Include="..\..\gsmlib\gsm_sms_codec.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\gsmlib\gsm_sms_store.cc">
+    <ClCompile Include="..\..\gsmlib\gsm_sms_store.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\gsmlib\gsm_sorted_phonebook.cc">
+    <ClCompile Include="..\..\gsmlib\gsm_sorted_phonebook.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\gsmlib\gsm_sorted_phonebook_base.cc">
+    <ClCompile Include="..\..\gsmlib\gsm_sorted_phonebook_base.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\gsmlib\gsm_sorted_sms_store.cc">
+    <ClCompile Include="..\..\gsmlib\gsm_sorted_sms_store.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\gsmlib\gsm_util.cc">
+    <ClCompile Include="..\..\gsmlib\gsm_util.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\gsmlib\gsm_win32_serial.cc">
+    <ClCompile Include="..\..\gsmlib\gsm_win32_serial.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\gsmlib\gsm_at.h">
+    <ClInclude Include="..\..\gsmlib\gsm_at.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\gsmlib\gsm_cb.h">
+    <ClInclude Include="..\..\gsmlib\gsm_cb.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\gsmlib\gsm_error.h">
+    <ClInclude Include="..\..\gsmlib\gsm_error.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\gsmlib\gsm_event.h">
+    <ClInclude Include="..\..\gsmlib\gsm_event.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\gsmlib\gsm_map_key.h">
+    <ClInclude Include="..\..\gsmlib\gsm_map_key.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\gsmlib\gsm_me_ta.h">
+    <ClInclude Include="..\..\gsmlib\gsm_me_ta.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\gsmlib\gsm_nls.h">
+    <ClInclude Include="..\..\gsmlib\gsm_nls.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\gsmlib\gsm_parser.h">
+    <ClInclude Include="..\..\gsmlib\gsm_parser.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\gsmlib\gsm_phonebook.h">
+    <ClInclude Include="..\..\gsmlib\gsm_phonebook.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\gsmlib\gsm_port.h">
+    <ClInclude Include="..\..\gsmlib\gsm_port.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\gsmlib\gsm_sms.h">
+    <ClInclude Include="..\..\gsmlib\gsm_sms.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\gsmlib\gsm_sms_codec.h">
+    <ClInclude Include="..\..\gsmlib\gsm_sms_codec.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\gsmlib\gsm_sms_store.h">
+    <ClInclude Include="..\..\gsmlib\gsm_sms_store.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\gsmlib\gsm_sorted_phonebook.h">
+    <ClInclude Include="..\..\gsmlib\gsm_sorted_phonebook.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\gsmlib\gsm_sorted_phonebook_base.h">
+    <ClInclude Include="..\..\gsmlib\gsm_sorted_phonebook_base.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\gsmlib\gsm_sorted_sms_store.h">
+    <ClInclude Include="..\..\gsmlib\gsm_sorted_sms_store.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\gsmlib\gsm_sysdep.h">
+    <ClInclude Include="..\..\gsmlib\gsm_sysdep.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\gsmlib\gsm_util.h">
+    <ClInclude Include="..\..\gsmlib\gsm_util.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\gsmlib\gsm_win32_serial.h">
+    <ClInclude Include="..\..\gsmlib\gsm_win32_serial.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

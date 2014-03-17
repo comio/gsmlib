@@ -9,10 +9,6 @@
       <Configuration>Release</Configuration>
       <Platform>Win32</Platform>
     </ProjectConfiguration>
-    <ProjectConfiguration Include="Template|Win32">
-      <Configuration>Template</Configuration>
-      <Platform>Win32</Platform>
-    </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <SccProjectName />
@@ -20,10 +16,6 @@
     <ProjectGuid>{B808E667-CD77-414C-8C8B-605283BA3D92}</ProjectGuid>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Template|Win32'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
-    <PlatformToolset>v110</PlatformToolset>
-  </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>StaticLibrary</ConfigurationType>
     <PlatformToolset>v110</PlatformToolset>
@@ -38,9 +30,6 @@
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings">
-  </ImportGroup>
-  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Template|Win32'">
-    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
@@ -71,7 +60,7 @@
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <WarningLevel>Level3</WarningLevel>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
-      <AdditionalIncludeDirectories>../gsmlib;..;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\gsmlib;..\..;..;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;HAVE_CONFIG_H;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AssemblerListingLocation>.\Release\</AssemblerListingLocation>
       <BrowseInformation>true</BrowseInformation>
@@ -104,7 +93,7 @@
       <MinimalRebuild>true</MinimalRebuild>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
-      <AdditionalIncludeDirectories>../gsmlib;..;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\gsmlib;..\..;..;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;HAVE_CONFIG_H;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AssemblerListingLocation>.\Debug\</AssemblerListingLocation>
       <PrecompiledHeaderOutputFile>.\Debug\gsmlib.pch</PrecompiledHeaderOutputFile>
@@ -126,49 +115,44 @@
       <OutputFile>.\Debug\gsmlib.lib</OutputFile>
     </Lib>
   </ItemDefinitionGroup>
-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Template|Win32'">
-    <ClCompile>
-      <AdditionalIncludeDirectories>../gsmlib;..;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-    </ClCompile>
-  </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\gsmlib\gsm_at.cc" />
-    <ClCompile Include="..\gsmlib\gsm_error.cc" />
-    <ClCompile Include="..\gsmlib\gsm_cb.cc" />
-    <ClCompile Include="..\gsmlib\gsm_event.cc" />
-    <ClCompile Include="..\gsmlib\gsm_me_ta.cc" />
-    <ClCompile Include="..\gsmlib\gsm_nls.cc" />
-    <ClCompile Include="..\gsmlib\gsm_parser.cc" />
-    <ClCompile Include="..\gsmlib\gsm_phonebook.cc" />
-    <ClCompile Include="..\gsmlib\gsm_sms.cc" />
-    <ClCompile Include="..\gsmlib\gsm_sms_codec.cc" />
-    <ClCompile Include="..\gsmlib\gsm_sms_store.cc" />
-    <ClCompile Include="..\gsmlib\gsm_sorted_phonebook.cc" />
-    <ClCompile Include="..\gsmlib\gsm_sorted_phonebook_base.cc" />
-    <ClCompile Include="..\gsmlib\gsm_sorted_sms_store.cc" />
-    <ClCompile Include="..\gsmlib\gsm_util.cc" />
-    <ClCompile Include="..\gsmlib\gsm_win32_serial.cc" />
+    <ClCompile Include="..\..\gsmlib\gsm_at.cc" />
+    <ClCompile Include="..\..\gsmlib\gsm_error.cc" />
+    <ClCompile Include="..\..\gsmlib\gsm_cb.cc" />
+    <ClCompile Include="..\..\gsmlib\gsm_event.cc" />
+    <ClCompile Include="..\..\gsmlib\gsm_me_ta.cc" />
+    <ClCompile Include="..\..\gsmlib\gsm_nls.cc" />
+    <ClCompile Include="..\..\gsmlib\gsm_parser.cc" />
+    <ClCompile Include="..\..\gsmlib\gsm_phonebook.cc" />
+    <ClCompile Include="..\..\gsmlib\gsm_sms.cc" />
+    <ClCompile Include="..\..\gsmlib\gsm_sms_codec.cc" />
+    <ClCompile Include="..\..\gsmlib\gsm_sms_store.cc" />
+    <ClCompile Include="..\..\gsmlib\gsm_sorted_phonebook.cc" />
+    <ClCompile Include="..\..\gsmlib\gsm_sorted_phonebook_base.cc" />
+    <ClCompile Include="..\..\gsmlib\gsm_sorted_sms_store.cc" />
+    <ClCompile Include="..\..\gsmlib\gsm_util.cc" />
+    <ClCompile Include="..\..\gsmlib\gsm_win32_serial.cc" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\gsmlib\gsm_at.h" />
-    <ClInclude Include="..\gsmlib\gsm_cb.h" />
-    <ClInclude Include="..\gsmlib\gsm_error.h" />
-    <ClInclude Include="..\gsmlib\gsm_event.h" />
-    <ClInclude Include="..\gsmlib\gsm_map_key.h" />
-    <ClInclude Include="..\gsmlib\gsm_me_ta.h" />
-    <ClInclude Include="..\gsmlib\gsm_nls.h" />
-    <ClInclude Include="..\gsmlib\gsm_parser.h" />
-    <ClInclude Include="..\gsmlib\gsm_phonebook.h" />
-    <ClInclude Include="..\gsmlib\gsm_port.h" />
-    <ClInclude Include="..\gsmlib\gsm_sms.h" />
-    <ClInclude Include="..\gsmlib\gsm_sms_codec.h" />
-    <ClInclude Include="..\gsmlib\gsm_sms_store.h" />
-    <ClInclude Include="..\gsmlib\gsm_sorted_phonebook.h" />
-    <ClInclude Include="..\gsmlib\gsm_sorted_phonebook_base.h" />
-    <ClInclude Include="..\gsmlib\gsm_sorted_sms_store.h" />
-    <ClInclude Include="..\gsmlib\gsm_sysdep.h" />
-    <ClInclude Include="..\gsmlib\gsm_util.h" />
-    <ClInclude Include="..\gsmlib\gsm_win32_serial.h" />
+    <ClInclude Include="..\..\gsmlib\gsm_at.h" />
+    <ClInclude Include="..\..\gsmlib\gsm_cb.h" />
+    <ClInclude Include="..\..\gsmlib\gsm_error.h" />
+    <ClInclude Include="..\..\gsmlib\gsm_event.h" />
+    <ClInclude Include="..\..\gsmlib\gsm_map_key.h" />
+    <ClInclude Include="..\..\gsmlib\gsm_me_ta.h" />
+    <ClInclude Include="..\..\gsmlib\gsm_nls.h" />
+    <ClInclude Include="..\..\gsmlib\gsm_parser.h" />
+    <ClInclude Include="..\..\gsmlib\gsm_phonebook.h" />
+    <ClInclude Include="..\..\gsmlib\gsm_port.h" />
+    <ClInclude Include="..\..\gsmlib\gsm_sms.h" />
+    <ClInclude Include="..\..\gsmlib\gsm_sms_codec.h" />
+    <ClInclude Include="..\..\gsmlib\gsm_sms_store.h" />
+    <ClInclude Include="..\..\gsmlib\gsm_sorted_phonebook.h" />
+    <ClInclude Include="..\..\gsmlib\gsm_sorted_phonebook_base.h" />
+    <ClInclude Include="..\..\gsmlib\gsm_sorted_sms_store.h" />
+    <ClInclude Include="..\..\gsmlib\gsm_sysdep.h" />
+    <ClInclude Include="..\..\gsmlib\gsm_util.h" />
+    <ClInclude Include="..\..\gsmlib\gsm_win32_serial.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

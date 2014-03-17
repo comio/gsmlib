@@ -60,7 +60,7 @@
       <WarningLevel>Level3</WarningLevel>
       <MinimalRebuild>true</MinimalRebuild>
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
-      <AdditionalIncludeDirectories>../gsmlib;..;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\gsmlib;..\..;..;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;HAVE_CONFIG_H;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AssemblerListingLocation>.\Debug\</AssemblerListingLocation>
       <PrecompiledHeaderOutputFile>.\Debug\gsmctl.pch</PrecompiledHeaderOutputFile>
@@ -97,7 +97,7 @@
       <Optimization>MaxSpeed</Optimization>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <WarningLevel>Level3</WarningLevel>
-      <AdditionalIncludeDirectories>../gsmlib;..;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\gsmlib;..\..;..;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;HAVE_CONFIG_H;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AssemblerListingLocation>.\Release\</AssemblerListingLocation>
       <PrecompiledHeaderOutputFile>.\Release\gsmctl.pch</PrecompiledHeaderOutputFile>
@@ -124,11 +124,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="getopt.c" />
-    <ClCompile Include="..\apps\gsmctl.cc" />
+    <ClCompile Include="..\getopt.c" />
+    <ClCompile Include="..\..\apps\gsmctl.cc" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="getopt.h" />
+    <ClInclude Include="..\getopt.h" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="gsmlib.vcxproj">
