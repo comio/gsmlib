@@ -614,7 +614,7 @@ int main(int argc, char *argv[])
       ::timeval timeoutVal;
       timeoutVal.tv_sec = 5;
       timeoutVal.tv_usec = 0;
-      me->waitEvent((gsmlib::timeval *)&timeoutVal);
+      me->waitEvent((gsmlib::GsmTime)&timeoutVal);
 #else
       struct timeval timeoutVal;
       timeoutVal.tv_sec = 5;
