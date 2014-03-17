@@ -15,6 +15,7 @@
 
 #include <string>
 #include <stdexcept>
+#include <gsmlib/gsm_sysdep.h>
 
 namespace gsmlib
 {

@@ -444,13 +444,13 @@ Timestamp SMSDecoder::getTimestamp()
 {
   Timestamp result;
 
-  result._year = getSemiOctetsInteger(2);
-  result._month = getSemiOctetsInteger(2);
-  result._day = getSemiOctetsInteger(2);
-  result._hour = getSemiOctetsInteger(2);
-  result._minute = getSemiOctetsInteger(2);
-  result._seconds = getSemiOctetsInteger(2);
-  result._timeZoneMinutes = getTimeZone(result._negativeTimeZone);
+  result._year = static_cast<short>(getSemiOctetsInteger(2));
+  result._month = static_cast<short>(getSemiOctetsInteger(2));
+  result._day = static_cast<short>(getSemiOctetsInteger(2));
+  result._hour = static_cast<short>(getSemiOctetsInteger(2));
+  result._minute = static_cast<short>(getSemiOctetsInteger(2));
+  result._seconds = static_cast<short>(getSemiOctetsInteger(2));
+  result._timeZoneMinutes = static_cast<short>(getTimeZone(result._negativeTimeZone));
   return result;
 }
 

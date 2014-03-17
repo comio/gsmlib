@@ -62,6 +62,8 @@ char *alloca ();
 #endif
 
 #ifdef _MSC_VER
+#pragma warning( disable : 4290 )
+#pragma warning( disable : 4996 )
 #if _MSC_VER < 1700
 #define MIN __min
 #else
